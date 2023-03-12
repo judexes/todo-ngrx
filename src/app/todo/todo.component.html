@@ -4,7 +4,7 @@
             <h1 class="text-2xl font-medium text-center">Todo List</h1>
             <form [formGroup]="newTodoForm" class="flex mt-4" (ngSubmit)="addTask()">
                 <input class="text-sm border-b appearance-none focus:outline-none w-full py-2 px-3 mr-4 text-grey-darker"
-                    placeholder="Add Todo" formControlName="todoItem">
+                    placeholder="Write a task..." formControlName="todoItem">
                 <button type="submit"
                     class="flex-no-shrink p-2 border-2 rounded-full px-8 uppercase text-teal border-teal hover:text-white hover:bg-teal">Add
                 </button>
@@ -13,7 +13,7 @@
         </div>
         <div>
             <div class="flex mb-4 items-center  border-b pb-4" *ngFor= "let value of taskList; index as i">
-                <p class="w-full text-grey-darkest text-xs" [ngClass]="{'line-through': value.completed}">{{value.name}}</p>
+                <p class="w-full text-grey-darkest text-xs" [ngClass]="{'line-through text-gray-300': value.completed}">{{value.name}}</p>
                 <button
                     class="flex-no-shrink p-2 ml-4 mr-2 border-2 rounded-full text-xs px-4  text-green border-green hover:bg-green"(click)="markDone(value)">Done</button>
                 <button
