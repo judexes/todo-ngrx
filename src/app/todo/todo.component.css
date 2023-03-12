@@ -1,0 +1,15 @@
+
+@tailwind components;
+
+@tailwind utilities;
+
+@tailwind base;
+
+input:focus {
+    /* border: 0rem 2rem; */
+    border: 0px;
+    border-bottom: 1px solid blue;
+    border-color: #28a745;
+    /* box-shadow: 0 0 0 0.2rem rgba(14, 205, 59, 0.25); */
+    @apply mt-4;
+}
