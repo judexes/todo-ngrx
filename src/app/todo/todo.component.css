@@ -13,3 +13,23 @@ input:focus {
     /* box-shadow: 0 0 0 0.2rem rgba(14, 205, 59, 0.25); */
     @apply mt-4;
 }
+
+button {
+    background-color: white;
+    color: rgb(33, 29, 30);
+    /* border: 2px solid transparent; */
+    /* border-radius: 35px; */
+    /* padding: 1rem 2rem; */
+    /* min-width: 10rem; */
+    /* text-align: center; */
+    transition: all 0.2s ease-in-out 0s;
+    cursor: pointer;
+    /* font-family: Inter; */
+    /* font-weight: 600; */
+}
+
+button:hover {
+    color: white;
+    background-color: rgb(33, 29, 30);
+    border: 2px solid transparent;
+}
