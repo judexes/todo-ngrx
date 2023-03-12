@@ -33,6 +33,14 @@ export class TodoComponent implements OnInit {
     window.localStorage.setItem('task', JSON.stringify(this.taskList))
     
   }
+
+  markDone(value: any) {
+    value.completed = !value.completed
+    value.completed === true ?
+      this.taskList.push(this.taskList.splice(this.taskList.indexOf(value), 1)[0]) :
+      this.taskList.unshift(this.taskList.splice(this.taskList.indexOf(value), 1)[0])
+  }
+  
   
 
   ngOnInit(): void {
