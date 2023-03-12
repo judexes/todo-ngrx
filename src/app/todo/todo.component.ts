@@ -20,6 +20,15 @@ export class TodoComponent implements OnInit {
   
   
 
+  addTask() {
+    const value = this.newTodoForm.value.todoItem
+    this.taskList.push({ id: this.taskList.length, name: value })
+    window.localStorage.setItem('task', JSON.stringify(this.taskList))
+    this.newTodoForm.reset();
+    
+  }
+  
+
   ngOnInit(): void {
     this.taskList = window.localStorage.getItem('task') ? JSON.parse(localStorage.getItem('task')) : []
   }
