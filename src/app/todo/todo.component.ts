@@ -27,6 +27,12 @@ export class TodoComponent implements OnInit {
     this.newTodoForm.reset();
     
   }
+
+  removeTask(i: any) {
+    this.taskList.splice(i, 1)
+    window.localStorage.setItem('task', JSON.stringify(this.taskList))
+    
+  }
   
 
   ngOnInit(): void {
